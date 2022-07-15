@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OT Enabor Portfolio | The Commercial Space Race</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+     <script src="https://kit.fontawesome.com/6e756b2848.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|
+    Source+Sans+Pro:300,900&display=swap">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- <img src="img/otenabor.jpg" alt="profile picture"> -->
+        </div>
+        <button class="nav-toggle" aria-label="toggle-navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+            </ul>
+
+        </nav>
+    </header>
+       <!-- Introduction Start -->
+    <section class="intro">
+
+        <h1 class="section__title section__title--intro">
+            The <strong>Commercial Space Race</strong>. 
+        </h1>
+
+        <p class="section__subtitle section__subtitle--intro"> IBM: Applied Data Science Capstone</p>
+        <img src="img/work/ibm/Falcon-9-Block-5.png" alt="A picture of my handsome face." class="intro__img">
+    </section>
+    <!-- Introduction End -->
+    <div class="portfolio-item-individual">
+        <p></p>
+        <img src="img/work/ibm/project_image.jpg" alt="An image of SpaceX Falcon 9.">
+        <p class="portfolio-item-section__title">
+            Introduction
+        </p>
+        <p>The commercial space age has arrived, companies are working towards making space travel affordable for everyone. Virgin Galactic is providing suborbital space flights. Rocket Lab is a small satellite provider. Blue Origin manufactures sub-orbital and orbital reusable rockets. The most successful is SpaceX. SpaceX has been able to accomplish the following, sending a spacecraft to the International Space Station. Starlink, a satellite internet constellation providing satellite internet access, and sending manned missions to space.</p>
+        <p>SpaceX is able to accomplish this because rocket launches are relatively inexpensive. SpaceX advertises Falcon 9 rocket launches on its website at a cost of $62m, other providers cost upwards of $165m for each rocket launch. SpaceX are able to save due to their ability to reuse their first stage. Therefore, if you can determine if a first stage will land, the cost of launch can be determined.</p>
+        <p>
+            The rocket payload is enclosed in the fairings. Stage two, helps bring the payload to orbit but most of the work is done by Stage 1. Stage 1 is much larger than stage 2 and is quite expensive. Unlike other rocket providers, SpaceX’s Falcon 9 can recover the first stage.
+        </p>
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/spacex-falcon9-transport-wide.jpg" alt="A schematic diagram of SpaceX falcon 9.">
+            </div>
+            <figcaption> Fig 1.1: A SpaceX Falcon 9 during transport to launch site.</figcaption>
+        </figure>
+
+        <p>
+            This project aims to provide information to billionaire industrialist Allon Musk, who is the founder of a competing rocket company SpaceY. The aim is to determine the price of each launch and determine if SpaceX will reuse the first stage. Instead of using rocket science, a machine learning model will be trained on publicly available information to predict if SpaceX will reuse the first stage. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
+
+        </p>
+
+        <p class="portfolio-item-section__title">
+            Data
+        </p>
+        <p>
+            The data used in this capstone will be gathered from the SpaceX REST API. This API gives us information about the following:  
+        </p>
+        
+        <ul>
+            <li>launches (including information about the rocket used), </li>
+            <li>payload delivered, </li>
+            <li>launch specifications, </li>
+            <li>landing specifications, </li>
+            <li>and landing outcome.</li>
+        </ul>
+        
+        <p class="portfolio-item-section__title">
+           Data Sources
+        </p>
+        <ol>
+            <li>SpaceX Rest API</li>
+            <ul>
+                <li>Rockets API to collect the name of booster - https://api.spacexdata.com/v4/rockets/</li>
+                <li>Launchpad API to collect the launch pad, the longitude, and the latitude of each rocket flight - https://api.spacexdata.com/v4/launchpads/</li>
+                <li>
+                    Payload API to collect the mass of the payload and the orbit destination - https://api.spacexdata.com/v4/payloads/
+                </li>
+                <li>
+                    Cores API to collect information on the outcome of landing, type of landing, number of flights with that core, gridfins usage and more - https://api.spacexdata.com/v4/cores/
+                </li>
+            </ul>
+            <br>
+            <li>Web Scraping Wikipedia page</li>
+            <p>
+                This section of the task involved using web scraping to collect Falcon 9 historical launch records from a wikipedia page title “List of Falcon 9 and Falcon Heavy Launches” - <a href="https://en.wikipedia.org/wiki/List_of_Falcon\_9\_and_Falcon_Heavy_launches">https://en.wikipedia.org/wiki/List_of_Falcon\_9\_and_Falcon_Heavy_launches</a>. The web scraping used the requests and beautifulSoup python modules to extract the launch records from HTML tables in Wikipedia and then parse the table and convert it into a pandas data frame.
+            </p>
+        </ol>
+
+        <p class="portfolio-item-section__title">
+            Methodology
+        </p>
+        
+        <p class="portfolio-item-section__subtitle">
+            Libraries Usesd
+        </p>
+        <p>
+            Several libraries were used in this project, the main ones being pandas and numpy for the data storage and manipulation. Requests was used to make HTTP requests to get data from the SpaceX API. 
+        </p>
+        <p class="portfolio-item-section__subtitle">
+            Data Source Collection
+        </p>
+        <p>
+            SpaceX Rocket Launch Data
+        </p>
+        <p>
+            In order to get data from SpaceX’s API, the Requests library was used to collect data from the SpaceX API. A GET request was used to request and parse the SpaceX launch data. This data was then stored in a pandas dataframe.   
+        </p>
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/raw_data.PNG" alt="A snapshot of the raw data collected from SpaceX Rest API. In a Pandas dataframe.">
+            </div>
+            <figcaption> Fig 2: A snapshot of the first 5 rows of dataframe containg raw data from SpaceX REST API.</figcaption>
+        </figure>
+        <p>
+            The data frame was then cleaned to get it into a format that could be used for further analysis with the help of some data wrangling. This included dealing with rows that had missing values. The mean of the payload mass column was used to replace the missing values in that column.
+        </p>
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/raw_data1.PNG" alt="A snapshot of the cleaned data collected from SpaceX Rest API. In a Pandas dataframe.">
+            </div>
+            <figcaption> Fig 3: A snapshot of the first 5 rows of dataframe of SpaceX REST API data after data wrangling.</figcaption>
+        </figure>
+
+        <p class="portfolio-item-section__subtitle">
+            Data Wrangling
+        </p>
+        <p>
+            In the data set, there are different cases where the booster did not land successfully - for example <strong>True Ocean</strong> meant the mission was successfully landed to a specific region of the ocean. <strong>False Ocean</strong> means the mission was unsuccessfully landed to a specific region of the ocean. <strong>True RTLS</strong> meant the mission successfully landed on a ground pad. <strong>False RTLS</strong> meant the mission was unsuccessfully landed on a ground pad. A landing outcome label was created from these outcomes into training labels where <strong>1</strong> meant the booster successfully landed and <strong>0</strong> meant it was not successfully landed  
+        </p>
+
+        <p>
+            The first task of EDA was to calculate the number of launches on each site. The data contained several launch facilities: Cape Canaveral Space Launch Complex, Vandenberg Air Force Base Space Launch Complex, Kennedy Space Centre Launch Complex.  Each launch aims for a dedicated orbit.  
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/Orbits.png" alt="An image illustrating the different orbits around the Earth.">
+            </div>
+            <figcaption> Fig 4: An image illustrating the different orbits around the Earth.</figcaption>
+        </figure>
+        <p>The orbits types included the following:</p>
+        <p>
+            <strong>LEO:</strong> Low Earth Orbit is an Earth-centred orbit with an altitude of 2000km or less (approximately one-third of the radius of the Earth), or with at least 11.25 periods per day (an orbital period of 128 minutes or less) and an eccentricity less than 0.25. Most of the manmade objects in outer space are in LEO <a href="https://en.wikipedia.org/wiki/Low_Earth_orbit?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">[1]</a>.  
+        </p>
+        <p><strong>MEO:</strong> Geocentric orbits ranging in altitude from 2000km to just below geosynchronous orbit at 35786km. It is also known as an intermediate circular orbit. These are ‘’most commonly at 20200km or 20650 km, with an orbital period of 12 hours. <a href="https://en.wikipedia.org/wiki/Low_Earth_orbit?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">[2]</a>
+        
+        </p>
+
+        <p>
+            <strong>GEO:</strong> Is a circular geosynchronus orbit 35786km above Earth’s equator and following the direction of the Earth’s rotation. <a href="https://en.wikipedia.org/wiki/Geostationary_orbit?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">[3]</a>
+        </p>
+
+        <p>
+            <strong>HEO:</strong> Geocentric orbits above the altitude of geosynchronous orbit. <a href="https://en.wikipedia.org/wiki/List_of_orbits?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">[4]</a>
+        </p>
+        <p>
+            The next tasks were to calculate the number and occurrence of each orbit. Then to calculate the number and occurrence of mission outcome per orbit type. The last task was to create a landing outcome label using the information of the mission outcome.
+        </p>
+
+        <p class="portfolio-item-section__subtitle">
+            Exploratory Data Analysis and Feature Engineering
+        </p>
+
+        <p>
+            In this stage of the capstone, the goal was to predict if the Falcon 9 first stage would land successfully. This would involve performing exploratory data analysis and feature engineering using Pandas, Numpy, and matplotlib libraries.  The SpaceX dataset was read into a Pandas dataframe from a csv file. The first step of the EDA was to see how the FlightNumber and Payload variables would affect the launch outcome. This was accomplished by creating a scatter plot of FlightNumber (independent) vs. PayloadMass (dependent) and overlaying the outcome of the launch. 
+ 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_1.png" alt="A scatter plot showing the relationship between flightNumber and PayloadMass, and how it affects launch outcome of SpaceX Falcon 9 rockets.">
+            </div>
+            <figcaption> Fig 5: A scatter plot showing the relationship between flightNumber and PayloadMass and how it affects launch outcome of SpaceX Falcon 9 rockets..</figcaption>
+        </figure>
+
+        <p>
+            From the resulting plot, it is evident that the payload mass is an important variable as the bigger the payload mass, the less likely that the first stage will land. 
+ 
+        </p>
+
+        <p>
+            The next task was to visualise the relationship between FlightNumber and Launch Site. A scatterplot was also used to visualise the relationship between these variables - FlightNumber (independent) and Launch Site (dependent) with the result of each launch used to differentiate each data point on the graph.
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_2.png" alt="A scatter plot showing the relationship between flightNumber and launch site, and how it affects launch outcome of SpaceX Falcon 9 rockets.">
+            </div>
+            <figcaption> Fig 6: A scatter plot showing the relationship between flightNumber and launch site and how it affects launch outcome of SpaceX Falcon 9 rockets.</figcaption>
+        </figure>
+        <p>
+            From the resulting plot, CCAFS SLC 40 was the most frequently used launchSite- the majority of its first 30 flights were not successful but the later flights were mostly successful.  There were 55 flights from this site with a success rate of 40%.  VAFB SLC 4E had 13 flights with a success rate of approximately 76%. KSC LC 39E had 21 flights with a success rate of 76% as well.  
+        </p>
+
+        <p>
+            The next step was to check if payload had an effect on each flight at the different launch sites. A scatterplot was used to visualise the relationship between the launchsite and payload mass variables with the outcome of the launch used to differentiate the data points. 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_3.png" alt="A scatter plot showing the relationship between launch site and payload mass, and how it affects launch outcome of SpaceX Falcon 9 rockets.">
+            </div>
+            <figcaption> Fig 7: A scatter plot showing the relationship between launch site and payload mass and how it affects launch outcome of SpaceX Falcon 9 rockets.</figcaption>
+        </figure>
+
+        <p>
+            From the figure, There is a relationship between weight and the success of a rocket launch. That is, for each launchsite we can say that as the payload gets larger we have more successful launches. However, with payloads below ~7000kg, there is no relationship observed for launch site CCAFS SLC 40. For the KSC LC 39A launch site, we see that the payload range from ~5500kg to ~7000kg had the most number of unsuccessful flights. 
+        </p>
+
+        <p>
+            The next task was to investigate the success rate of each orbit type and a bar chart graph was used to accomplish this. The mean of the outcome for each launch for each orbit type was calculated to be used in the bar chart. 
+ 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_4.png" alt="A bar graph showing the success rate of each orbit type where SpaceX Falcon 9 rockets were launched.">
+            </div>
+            <figcaption> Fig 8: A bar graph showing the success rate of each orbit type where SpaceX Falcon 9 rockets were launched.</figcaption>
+        </figure>
+
+        <p>
+            From the figure, ES-L1, GEO, HEO, SSO, and VLEO had the most success rate. 
+
+            The next task was to visualise the relationship between FlightNumber and Orbit type. This was done using a scatter plot.  THe LEO orbit there seems to be a relationship between the flight number and success rate. There is no other discernible relationship at the other orbits.
+
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_5.png" alt="A scatter plot showing the relationship between Flight number and orbit type, and how it affects launch outcome of SpaceX Falcon 9 rockets.">
+            </div>
+            <figcaption> Fig 9: A bar graph showing the success rate of each orbit type where SpaceX Falcon 9 rockets were launched.</figcaption>
+        </figure>
+
+        <p>
+            The next task was to visualise the launch success yearly trend and this was done using a line chart with year (independent) and average success rate (dependent). 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/eda_7.png" alt="A line graph showing the average yearly success trend for launch outcomes of SpaceX Falcon 9 rockets.">
+            </div>
+            <figcaption> Fig 11: A line graph showing the average yearly success trend for launch outcomes of SpaceX Falcon 9 rockets.</figcaption>
+        </figure>
+
+        <p>
+            From the figure, we can see that for the first 3 years between 2010 -2013, SpaceX had a 0% success rate for Falcon 9 flights. There was a sharp increase from 2013 till 2014 where the success rate stayed constant at 40% till 2015. This was then followed by sharp increases and decreases till 2019. Since 2019, the success rate has dropped. 
+
+        </p>
+
+        <p><strong>Feature Engineering</strong></p>
+
+        <p>
+            Through the EDA above we have obtained preliminary insights into which variables are important and affect the success rate of each launch. These variables will be used as features to assist in successful prediction of launch outcomes. 
+
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/fe_1.PNG" alt="The first five rows of the features dataframe.">
+            </div>
+            <figcaption> Fig 12: The first five rows of the features dataframe.</figcaption>
+        </figure>
+        <p>
+            The pandas method get_dummies will be applied to the features dataframe above for one-hot encoding on the columns Orbits, LaunchSite, LandingPad, and Serial. 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/fe_2.PNG" alt="The first five rows of the features dataframe after one-hot encoding.">
+            </div>
+            <figcaption> Fig 13: The first five rows of the features dataframe after one-hot encoding.</figcaption>
+        </figure>
+
+        <p>
+            The last step of the feature engineering will be to change all the numeric columns to variable type float64. 
+        </p>
+
+        <figure>
+            <div class="fig-img">
+                <img src="img/work/ibm/fe_3.PNG" alt="The numeric columns in the features dataframe have a variable type of float64.">
+            </div>
+            <figcaption> Fig 14: The numeric columns in the features dataframe have a variable type of float64..</figcaption>
+        </figure>
+
+
+
+
+        
+    </div>
+
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <a href="mailto:oselu.enabor@worldsview.com" class="footer__link">oselu@mail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a href="dribble.com" class="social-list__link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="dribble.com" class="social-list__link">
+                    <i class="fa-brands fa-linkedin"></i></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="dribble.com" class="social-list__link">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="js/index.js"></script>
+</body>
+</html>
