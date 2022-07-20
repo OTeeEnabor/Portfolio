@@ -20,7 +20,9 @@
 <body>
     <header>
         <div class="logo">
-            <!-- <../img src="../img/otenabor.jpg" alt="profile picture"> -->
+            <a href="../index.html">
+                <img src="../img/logo_OD.png" alt="Open delta logo">
+            </a>
         </div>
         <button class="nav-toggle" aria-label="toggle-navigation">
             <span class="hamburger"></span>
@@ -39,30 +41,33 @@
     <section class="intro">
 
         <h1 class="section__title section__title--intro">
-            Johannesburg Market Daily Prices <strong>Web Scraping</strong>
+            Johannesburg Market<strong>Web Scraping</strong>
         </h1>
 
-        <p class="section__subtitle section__subtitle--intro"> IBM: Applied Data Science Capstone</p>
-        <img src="../img/work/ibm/Falcon-9-Block-5.png" alt="A picture of my handsome face." class="intro__img">
+        <p class="section__subtitle section__subtitle--intro"> 
+            Web scraping with Google Sheets
+        </p>
+        <img src="../img/work/jhbmarket/home.PNG" alt="A picture of the Johannesburg Market Website." class="intro__img">
     </section>
     <!-- Introduction End -->
     <div class="portfolio-item-individual">
-        <p></p>
-        <img src="../img/work/ibm/project_image.jpg" alt="An image of SpaceX Falcon 9.">
         <p class="portfolio-item-section__title">
-            Introduction
+            Project Overview
         </p>
-        <p>The commercial space age has arrived, companies are working towards making space travel affordable for everyone. Virgin Galactic is providing suborbital space flights. Rocket Lab is a small satellite provider. Blue Origin manufactures sub-orbital and orbital reusable rockets. The most successful is SpaceX. SpaceX has been able to accomplish the following, sending a spacecraft to the International Space Station. Starlink, a satellite internet constellation providing satellite internet access, and sending manned missions to space.</p>
-        <p>SpaceX is able to accomplish this because rocket launches are relatively inexpensive. SpaceX advertises Falcon 9 rocket launches on its website at a cost of $62m, other providers cost upwards of $165m for each rocket launch. SpaceX are able to save due to their ability to reuse their first stage. Therefore, if you can determine if a first stage will land, the cost of launch can be determined.</p>
-        <p>
-            The rocket payload is enclosed in the fairings. Stage two, helps bring the payload to orbit but most of the work is done by Stage 1. Stage 1 is much larger than stage 2 and is quite expensive. Unlike other rocket providers, SpaceX’s Falcon 9 can recover the first stage.
-        </p>
+        <p>The intention behind this project was to collect data from Johannesburg Market and use it to determine the most profitable crop to grow as a new farmer. The daily price for a predetermined number of crops was collected from <strong><a href="http://www.joburgmarket.co.za/dailyprices.php">Johannesburg Market website</a></strong>. These predetermined crops were selected based on prior research and these crops were Spinach, Cabbage, Tomato, and Basil.  The data would be stored on Google Sheets due to its usability for working in teams and being stored online. The data was collected using Google’s scripting platform Google Apps Script which uses Javascript and XML. The script would collect information about the aforementioned crops from Johannesburg Market’s website everyday at 12pm. This script has been running since 20 February 2021. </p>
+        
         <figure>
             <div class="fig-img">
-                <img src="../img/work/ibm/spacex-falcon9-transport-wide.jpg" alt="A schematic diagram of SpaceX falcon 9.">
+                <img src="../img/work/jhbmarket/crops_head.jpg" alt="An image of different crops to be sold on a store shelf.">
             </div>
             <figcaption> Fig 1.1: A SpaceX Falcon 9 during transport to launch site.</figcaption>
         </figure>
+
+        <div class="button-holder">
+            <a href="https://docs.google.com/spreadsheets/d/10cDwG7I6s-9bewY2s1U6jjOAWaWnuQfmE1b2FtRnAMc/edit?usp=sharing" class="btn">View spreadsheet</a>
+        </div>
+    
+        
 
         
         
@@ -71,20 +76,20 @@
 
     <!-- Footer Start -->
     <footer class="footer">
-        <a href="mailto:oselu.enabor@worldsview.com" class="footer__link">oselu@mail.com</a>
+        <a href="mailto:oenabor@gmail.com" class="footer__link">Email me</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a href="dribble.com" class="social-list__link">
+                <a href="https://github.com/OTeeEnabor" class="social-list__link">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a href="dribble.com" class="social-list__link">
+                <a href="https://www.linkedin.com/in/oseluoleenabor/" class="social-list__link">
                     <i class="fa-brands fa-linkedin"></i></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a href="dribble.com" class="social-list__link">
+                <a href="https://www.superprof.co.za/engineering-graduate-offering-maths-and-physics-lessons-from-grade-grade-johannesburg.html" class="social-list__link">
                     <i class="fa-solid fa-chalkboard-user"></i>
                 </a>
             </li>

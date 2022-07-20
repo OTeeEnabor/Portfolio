@@ -47,6 +47,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    
 }
 
 section {
@@ -87,7 +88,9 @@ strong {font-weight: var(--fw-bold);}
 .btn:hover {
     transform: scale(1.1);
 }
+
 /* Typography */
+
 h1,
 h2,
 h3 {
@@ -99,14 +102,14 @@ h1 {font-size: var(--fs-h1);}
 h2 {font-size: var(--fs-h2);}
 h3 {font-size: var(--fs-h3);}
 
-.section__tile {
+.section__title {
     margin-bottom: .25em;
 }
 
-.section__tile--intro {
+.section__title--intro {
     font-weight: var(--fw-reg);
 }
-.section__tile--intro  strong{
+.section__title--intro  strong{
     display: block;
 }
 .section__subtitle {
@@ -284,7 +287,7 @@ header {
 
     .introduction-text {
         text-align: center;
-        margin: 1em 1em;
+        margin: 1em 4em;
         font-weight: var(--fw-reg);
     }
 }
@@ -489,4 +492,11 @@ figure {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.button-holder {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
