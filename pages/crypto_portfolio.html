@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OT Enabor Portfolio | JHB Daily Market Web Scraping</title>
+    <title>OT Enabor Portfolio | Crypto Portfolio</title>
     <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
 
     <link rel="stylesheet"
@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW9D688"
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW9D688"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
@@ -52,30 +52,56 @@
     <section class="intro">
 
         <h1 class="section__title section__title--intro">
-            Johannesburg Market<strong>Web Scraping</strong>
+            Cryptocurrency<strong>Portfolio Manager</strong>
         </h1>
 
         <p class="section__subtitle section__subtitle--intro"> 
-            Web scraping with Google Sheets
+            Built on Google Sheets with data from REST APIs.
         </p>
-        <img src="../img/work/jhbmarket/home.PNG" alt="A picture of the Johannesburg Market Website." class="intro__img">
+        <img src="../img/work/crypto/Crypto_portfolio.png" alt="Crypto porfolio project image." class="intro__img">
     </section>
     <!-- Introduction End -->
     <div class="portfolio-item-individual">
         <p class="portfolio-item-section__title">
             Project Overview
         </p>
-        <p>The intention behind this project was to collect data from Johannesburg Market and use it to determine the most profitable crop to grow as a new farmer. The daily price for a predetermined number of crops was collected from <strong><a href="http://www.joburgmarket.co.za/dailyprices.php">Johannesburg Market website</a></strong>. These predetermined crops were selected based on prior research and these crops were Spinach, Cabbage, Tomato, and Basil.  The data would be stored on Google Sheets due to its usability for working in teams and being stored online. The data was collected using Google’s scripting platform Google Apps Script which uses Javascript and XML. The script would collect information about the aforementioned crops from Johannesburg Market’s website everyday at 12pm. This script has been running since 20 February 2021. </p>
+        <p>The portfolio tracker allows me to track the performance of my JSE stocks and  cryptocurrencies. The tracker also lets me track my historic transactions, their worth, and destinations or sources. The tracker was built in Google Sheets using Google App Script to create scripts to automate the collection of price data for each JSE stock and cryptocurrency I have invested in. This script runs every 30 minutes and collects price data by REST APIs from <a href="https://www.altcointrader.co.za/api/" target="_blank" rel="noopener noreferrer">AltCoin Trader</a> and <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener noreferrer">CoinGecko</a>. For JSE stocks, I use Google Sheets’ <a href="https://support.google.com/docs/answer/3093281?hl=en" target="_blank" rel="noopener noreferrer">GOOGLEFINANCE function</a> to fetch information from <a href="https://www.google.com/finance/" target="_blank" rel="noopener noreferrer">Google Finance</a>.  </p>
         
         <figure>
             <div class="fig-img">
-                <img src="../img/work/jhbmarket/crops_head.jpg" alt="An image of different crops to be sold on a store shelf.">
+                <img src="../img/work/crypto/portfolio_crypto.PNG" alt="A snapshot of crypto portfolio dashboards.">
             </div>
-            <figcaption> Fig 1.1: A SpaceX Falcon 9 during transport to launch site.</figcaption>
+            <figcaption> Fig 1: An overview dashboard showing portfolio performance.</figcaption>
+        </figure>
+
+        <p>
+            With the tracker, I know my total investment(JSE Stocks and Cryptocurrency) and have a performance (profit or loss) breakdown. 
+
+        </p>
+        <p>
+            For each investment, I know the following:
+        </p>
+        <ul>
+            <li>Number of shares,</li>
+            <li>Weighted purchase price</li>
+            <li>Trading amount today</li>
+            <li>Total investment</li>
+            <li>Value of investment today</li>
+            <li>Percentage change</li>
+            <li>Ratio of total investment</li>
+            <li>Loss/Profit</li>
+            <li>Industry of investment</li>
+        </ul>
+
+        <figure>
+            <div class="fig-img">
+                <img src="../img/work/crypto/crypto_portfolio_item.PNG" alt="A snapshot of information collected for each investment in portfolio.">
+            </div>
+            <figcaption> Fig 2: A snapshot of information collected for each investment in portfolio.</figcaption>
         </figure>
 
         <div class="button-holder">
-            <a href="https://docs.google.com/spreadsheets/d/10cDwG7I6s-9bewY2s1U6jjOAWaWnuQfmE1b2FtRnAMc/edit?usp=sharing" class="btn">View spreadsheet</a>
+            <a href="#footer" class="btn">Want your own portfolio manager?</a>
         </div>
     
         
@@ -86,7 +112,7 @@
 
 
     <!-- Footer Start -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <a href="mailto:oenabor@gmail.com" class="footer__link">Email me</a>
         <ul class="social-list">
             <li class="social-list__item">
