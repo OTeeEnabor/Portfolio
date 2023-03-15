@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TW9D688');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OT Enabor Portfolio | Fuel Mileage Dashboard</title>
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+     <script src="https://kit.fontawesome.com/6e756b2848.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|
+    Source+Sans+Pro:300,900&display=swap">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW9D688"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/logo_OD.png" alt="Open delta logo">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="toggle-navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="../index.html#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="../index.html#about" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="../index.html#work" class="nav__link">My Work</a></li>
+            </ul>
+
+        </nav>
+    </header>
+       <!-- Introduction Start -->
+    <section class="intro">
+
+        <h1 class="section__title section__title--intro">
+            Fuel<strong>Mileage Dashboard</strong>
+        </h1>
+
+        <p class="section__subtitle section__subtitle--intro"> 
+             Hosted on <strong>Streamlit</strong>
+        </p>
+        <img src="../img/work/fuel/fuel_0.jpg" alt="Fuel dashboard project image." class="intro__img">
+    </section>
+    <!-- Introduction End -->
+    <div class="portfolio-item-individual">
+        <p class="portfolio-item-section__title">
+            Project Overview
+        </p>
+        <p>Initially, the purpose of this dashboard was to help me track my car's fuel expenses. Now, I also use this app to estimate the cost of each trip I make with my car. The dashboard tracks my total spend on fuel, total distance travelled, amount of fuel purchased in litres, and my car's fuel economy.  
+        </p>
+        
+        <figure>
+            <div class="fig-img">
+                <img src="../img/work/fuel/fuel_1.PNG" alt="A snapshot of fuel mileage dashboard.">
+            </div>
+            <figcaption> Fig 1: An snapshot of the dashboard used to track fuel expenses.</figcaption>
+        </figure>
+
+        <p>
+            The dashboard was built using Python with data stored on a private Google Sheets spreadsheet and the dashboard is hosted on Streamlit.  The data was collected from Google Sheets using  <a href="https://github.com/betodealmeida/shillelagh">Shillelagh</a>, a Python library that enables queries to datasets using SQL, and stored in a pandas dataframe for manipulation.  Various streamlit components were used to present the data seen on the dashboard. 
+        </p>
+        <!-- <figure>
+            <div class="fig-img">
+                <img src="../img/work/crypto/crypto_portfolio_item.PNG" alt="A snapshot of information collected for each investment in portfolio.">
+            </div>
+            <figcaption> Fig 2: A snapshot of information collected for each investment in portfolio.</figcaption>
+        </figure> -->
+        <div class="button-holder">
+            <a href="https://oteeenabor-fuel-dashboard-main-x9442l.streamlit.app/" class="btn">View dashboard</a>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <footer id="footer" class="footer">
+        <a href="mailto:oenabor@gmail.com" class="footer__link">Email me</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a href="https://github.com/OTeeEnabor" class="social-list__link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.linkedin.com/in/oseluoleenabor/" class="social-list__link">
+                    <i class="fa-brands fa-linkedin"></i></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.superprof.co.za/engineering-graduate-offering-maths-and-physics-lessons-from-grade-grade-johannesburg.html" class="social-list__link">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
