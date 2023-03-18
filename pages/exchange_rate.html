@@ -65,29 +65,43 @@
         <p class="portfolio-item-section__title">
             Project Overview
         </p>
-        <p>This project was inspired from two seperate tasks given to me in my previous role as a Digital Transformation Business Analyst. The first task was to track the exchange rate of the countries in which we operated in. The fluctuation of exchange rate affected the price of which certain products were sold at in these countries. The second task was to forecast the number of sales in each of these countries. The currencies which are analysed in this tool are: South African Rand, Mauritian Rupee, Kenyan Shilling, Nigerian Naira, Mozambique Meticals, and Botswana Pula.    
+        <p>This project was inspired by two seperate tasks given to me during my previous role as a Digital Transformation Business Analyst. The first task was to track the exchange rate of the countries in which we operated in. The fluctuation of exchange rate affected the price of which certain products were sold at in these countries. The second task was to forecast the expected number of sales in each of these countries. The currencies which are analysed in this tool are: South African Rand, Mauritian Rupee, Kenyan Shilling, Nigerian Naira, Mozambique Meticals, and Botswana Pula.    
         </p>
         
         <figure>
             <div class="fig-img">
-                <img src="../img/work/fuel/fuel_1.PNG" alt="A snapshot of fuel mileage dashboard.">
+                <img src="../img/work/exchange/exchange_1.PNG" alt="A snapshot of exchange rate forecast dashboard.">
             </div>
-            <figcaption> Fig 1: An snapshot of the dashboard used to track fuel expenses.</figcaption>
+            <figcaption> Fig 1: A snapshot of the exchange rate forecast tool.</figcaption>
         </figure>
 
-        <p>
+        <!-- <p>
             The dashboard was built using Python with data stored on a private Google Sheets spreadsheet and the dashboard is hosted on Streamlit.  The data was collected from Google Sheets using  <a href="https://github.com/betodealmeida/shillelagh">Shillelagh</a>, a Python library that enables queries to datasets using SQL, and stored in a pandas dataframe for manipulation.  Various streamlit components were used to present the data seen on the dashboard. 
-        </p>
-        <!-- <figure>
-            <div class="fig-img">
-                <img src="../img/work/crypto/crypto_portfolio_item.PNG" alt="A snapshot of information collected for each investment in portfolio.">
-            </div>
-            <figcaption> Fig 2: A snapshot of information collected for each investment in portfolio.</figcaption>
-        </figure> -->
+        </p> -->
+       
         <div class="button-holder">
             <a href="https://oteeenabor-fuel-dashboard-main-x9442l.streamlit.app/" class="btn">View dashboard</a>
         </div>
+        <p class="portfolio-item-section__title">
+            Data Collection
+        </p>
+        <p>
+            <a href="https://exchangerate.host/#/">Exchangerate.host</a> is used to collect the exchange rate data for each currency. They provide a simple and effective free service for current and historical foreign exchange rates. The servie is trusted and the data is sourced from financial data providers and banks, including the European Central Bank. A Google Apps Script is used to access the latest rates API endpoint. This script is excuted daily between 5am and 6am. Then another script is used to write the latest rate of each currency in a Google Sheet. The script is executed everyday between 6am and 7am. Google's Apps Script is a cloud-based JavaScript platform that allows for integration with and automation of tasks across Google products [not sponsored advertising :)]
+        </p>
+        <figure>
+            <div class="fig-img">
+                <img src="../img/work/exchange/exchange_2.PNG" alt="A snapshot of lates rate api endpoint provided by exchangerate.host.">
+            </div>
+            <figcaption> Fig 2: A snapshot of exchangerate.hosts latest rates API endpoint. [<a href="https://exchangerate.host/#/">source</a>]</figcaption>
+        </figure>
+        <p class="portfolio-item-section__title">
+            Timeseries Forecasting
+        </p>
+        <p>
+            A timeseries forecast analysis was performed on the data collected from the Google sheet. This analysis was performed on Google Colab notebook. This notebook is currently publicly available to see the steps performed - from determining stationarity and making the non-stationary series stationary. 
+        </p>
     </div>
+
     <!-- Footer Start -->
     <footer id="footer" class="footer">
         <a href="mailto:oenabor@gmail.com" class="footer__link">Email me</a>
